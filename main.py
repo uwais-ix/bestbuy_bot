@@ -5,7 +5,9 @@ def main():
     config = Configuration()
     driver = bot.init_driver(config.browser_name,config.driver_path)
     item = bot.search_items(driver, config.search_url)
-    purchase = bot.purchase_item(driver, item, config.payment_method)
+    bot.add_to_cart(driver,item)
+    if bot.checkout(driver, config.payment_method, config.cvv):
+        print("checkout successful")
 
 if __name__ == '__main__':
     main()

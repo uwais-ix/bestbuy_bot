@@ -2,7 +2,7 @@ import json
 
 CONFIG_PATH = './config.json'
 # do not change order of CONFIG_KEYS as index is used in Configuration class
-CONFIG_KEYS = ("payment method", "search url", "browser name", "driver path")
+CONFIG_KEYS = ("payment method", "search url", "browser name", "driver path", "cvv")
 
 
 class Configuration:
@@ -24,6 +24,10 @@ class Configuration:
     @property
     def driver_path(self):
         return self._config[CONFIG_KEYS[3]]
+
+    @property
+    def cvv(self):
+        return self._config[CONFIG_KEYS[4]]
 
 
 def parse_json_file(path):

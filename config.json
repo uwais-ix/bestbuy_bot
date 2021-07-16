@@ -1,6 +1,7 @@
 {
   "payment method" : "paypal",
-  "search url" : "",
+  "search url" : "https://www.bestbuy.ca/en-ca/search?search=rtx+laptop",
   "browser name" : "chrome",
-  "driver path" : "C:\\Users\\uzi24\\PycharmProjects\\bestbuy_bot\\chromedriver.exe"
+  "driver path" : "C:\\Users\\uzi24\\PycharmProjects\\bestbuy_bot\\chromedriver.exe",
+  "cvv" : "123"
 }
