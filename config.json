@@ -2,5 +2,5 @@
   "payment method" : "paypal",
   "search url" : "",
   "browser name" : "chrome",
-  "driver path" : ""
+  "driver path" : "C:\\Users\\uzi24\\PycharmProjects\\bestbuy_bot\\chromedriver.exe"
 }
