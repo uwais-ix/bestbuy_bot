@@ -4,7 +4,7 @@ CONFIG_PATH = './config.json'
 # can add more keys
 # but do not change order of prev keys as index is used in Configuration class
 KEYS = ("settings", "actions")
-SETTINGS_KEYS = ("payment method", "browser name", "driver path")
+SETTINGS_KEYS = ("browser name", "driver path")
 
 
 class Configuration:
@@ -14,16 +14,12 @@ class Configuration:
         self._actions = self._config[KEYS[1]]
 
     @property
-    def payment_method(self):
+    def browser_name(self):
         return self._settings[SETTINGS_KEYS[0]]
 
     @property
-    def browser_name(self):
-        return self._settings[SETTINGS_KEYS[1]]
-
-    @property
     def driver_path(self):
-        return self._settings[SETTINGS_KEYS[2]]
+        return self._settings[SETTINGS_KEYS[1]]
 
     @property
     def actions(self):

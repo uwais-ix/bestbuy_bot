@@ -1,6 +1,5 @@
 {
   "settings": {
-    "payment method": "paypal",
     "browser name": "chrome",
     "driver path": "C:\\Users\\uzi24\\PycharmProjects\\bestbuy_bot\\chromedriver.exe"
   },
