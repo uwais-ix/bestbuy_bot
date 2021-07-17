@@ -41,5 +41,34 @@
      "target_method" : "class_name",
      "target_name" : "content_3Dbgg"
    }
- }
+ },
+  "supported actions": {
+    "action 1 name":{
+     "action": "load",
+     "url" : "load url here",
+     "wait_time" : "1"
+   },
+   "action 2 name": {
+     "action": "search",
+	 "url": "url",
+     "target_method": "",
+     "target_name": "",
+     "wait_time": "2"
+   },
+   "action 3 name" : {
+     "action" : "input text",
+     "target_method": "",
+     "target_name": "",
+     "text": "cvv"
+   },
+   "action 4 name": {
+     "action" : "click",
+     "target_method" : "",
+     "target_name" : ""
+   },
+   "action 5 name": {
+     "action": "wait",
+     "wait_time" : "2"
+   }
+  }
 }
