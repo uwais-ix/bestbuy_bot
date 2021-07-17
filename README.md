@@ -48,7 +48,7 @@ Click -> clicks on the targeted element
 ## Element Targetting
 
 Only **single element** target supported. 
-See [documentation](selenium-python.readthedocs.io/locating-elements.html) to understand how target works. 
+See [documentation](https://selenium-python.readthedocs.io/locating-elements.html) to understand how target works. 
 
 > dictionary key = target_method
 > 
