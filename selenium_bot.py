@@ -1,4 +1,5 @@
 from selenium import webdriver
+import selenium
 
 WEBDRIVERS = {"chrome": webdriver.Chrome, "firefox": webdriver.Firefox, "edge": webdriver.Edge}
 
@@ -6,6 +7,7 @@ WEBDRIVERS = {"chrome": webdriver.Chrome, "firefox": webdriver.Firefox, "edge": 
 def init_driver(browser_name, driver_path):
     if browser_name.lower() in WEBDRIVERS:
         driver = WEBDRIVERS[browser_name](driver_path)
+
     else:
         raise Exception("invalid browser name")
 
@@ -47,3 +49,31 @@ def checkout(driver, payment_method, cvv, place_order_class_name="content_3Dbgg"
         elem.click()
     except:
         raise Exception("failed to checkout")
+
+
+def goto_page(driver, link, wait_time=2):
+    driver.get(link)
+    driver.explicit_wait(wait_time)
+
+
+def target_element(driver, target_method, target_name, wait_time=2):
+    driver_dict = {
+        "id": driver.find_element_by_id(),
+        "name": driver.find_element_by_name(),
+        "xpath": driver.find_element_by_xpath(),
+        "link_text": driver.find_element_by_link_text(),
+        "partial_link_text": driver.find_element_by_partial_link_text(),
+        "tag_name": driver.find_element_by_tag_name(),
+        "class_name": driver.find_element_by_class_name(),
+        "css_selector": driver.find_element_by_css_selector()
+    }
+    if target_method in driver_dict:
+        target_func = driver_dict[target_method]
+        try:
+            elem = target_func(target_name)
+            driver.explicitly_wait(wait_time)
+            elem.click()
+        except:
+            raise Exception("failed to target element: ", "target name")
+    else:
+        raise Exception("invalid target method")
