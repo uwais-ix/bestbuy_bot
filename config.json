@@ -1,7 +1,45 @@
 {
-  "payment method" : "paypal",
-  "search url" : "https://www.bestbuy.ca/en-ca/search?search=rtx+laptop",
-  "browser name" : "chrome",
-  "driver path" : "C:\\Users\\uzi24\\PycharmProjects\\bestbuy_bot\\chromedriver.exe",
-  "cvv" : "123"
+  "settings": {
+    "payment method": "paypal",
+    "browser name": "chrome",
+    "driver path": "C:\\Users\\uzi24\\PycharmProjects\\bestbuy_bot\\chromedriver.exe"
+  },
+ "actions": {
+   "search page until stock found": {
+     "action" : "search",
+     "url" : "https://www.bestbuy.ca/en-ca/search?search=rtx+laptop",
+     "wait_time" : "2",
+     "target_method" : "partial_link_text",
+     "target_name" : "Available to ship"
+   },
+   "item in stock, add to cart": {
+     "action" : "click",
+     "target_method" : "class_name",
+     "target_name" : "addToCartLabel_YZaVX"
+   },
+   "load cart": {
+     "action" : "load",
+     "url" : "https://www.bestbuy.ca/en-ca/basket",
+     "wait_time" : "100"
+   },
+   "click on continue to checkout" : {
+     "action" : "click",
+     "target_method" : "class_name",
+     "target_name" : "content_3Dbgg"
+   },
+   "wait for checkout page to load completely": {
+     "action" : "wait",
+     "wait_time" : "2"
+   },
+   "enter cvv in text field": {
+     "action" : "input text",
+     "target_method" : "id",
+     "target_name" : "cvv"
+   },
+   "click on place order" : {
+     "action" : "click",
+     "target_method" : "class_name",
+     "target_name" : "content_3Dbgg"
+   }
+ }
 }
