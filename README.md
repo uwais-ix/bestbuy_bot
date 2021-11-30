@@ -143,7 +143,7 @@ Example in config file of explicitly waiting 2 sec :
 
 ```
 "wait for checkout page to load completely": {  
-						"action" : "wait",  	
+						"action"    : "wait",  	
 						"wait_time" : "2"  
 					     }
 ```
