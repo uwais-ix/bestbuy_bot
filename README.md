@@ -171,8 +171,8 @@ Example in config file :
 
 ```
 "click on place order" : {  
-			      "action" 	: "click",  
-			      "target_method" : "class_name",  
+			      "action" 		: "click",  
+			      "target_method" 	: "class_name",  
 			      "target_name" 	: "content_3Dbgg"  
 			  }
 ```
