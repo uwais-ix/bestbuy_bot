@@ -60,22 +60,22 @@ driver_dict = {
 	  	 "tag_name"	 	  : driver.find_element_by_tag_name,  
 	  	 "class_name"		  : driver.find_element_by_class_name,  
 	  	 "css_selector"	  	  : driver.find_element_by_css_selector  
-}
+	      }
 ```
 \
 In the **config file**, the key of the `driver_dict` is referred as the value for the following
 
-> "target_method" :   
+``` "target_method" :   ```
 
 \
 For example if you want to target an element by `driver.find_element_by_id`, you will have the following in your config file
 
-> "target_method" : "id"
+``` "target_method" : "id" ```
 
 \
 You will also have to provide the id of what you want to target in your config file.
 
-> "target_name" : "id-being-targeted-here"
+``` "target_name" : "id-being-targeted-here" ```
 
 You can think of the `target_name` as a parameter or argument for the `target_method`
 
@@ -109,11 +109,13 @@ This script has two classes:
 ### Load
 Example in config file : 
 
-> "load cart": {  
-> 		  "action" 	: "load",  
-> 		  "url" 	: "https://www.bestbuy.ca/en-ca/basket",  
-> 		  "wait_time" 	: "100"
->}
+```
+"load cart": {  
+	        "action" 	: "load",  
+		"url" 		: "https://www.bestbuy.ca/en-ca/basket",  
+		"wait_time" 	: "100"
+             }
+```
 
 \
 Loads a requested `"url"`  
@@ -121,13 +123,15 @@ Loads a requested `"url"`
 ### Search 
  Example in config file : 
 
-> "search page until stock found": {  
-> 	"action" 	: "search",  
-> 	"url" 		: "https://www.bestbuy.ca/en-ca/search?search=rtx+laptop",  
-> 	"wait_time" 	: "2",  
-> 	"target_method" : "partial_link_text",  
-> 	"target_name" 	: "Available to ship"  
->}
+```
+"search page until stock found": {
+				    "action" 		: "search",  
+				    "url" 		: "https://www.bestbuy.ca/en-ca/search?search=rtx+laptop",  
+				    "wait_time" 	: "2",  
+				    "target_method" 	: "partial_link_text",  
+				    "target_name" 	: "Available to ship"  
+                                 }
+```
 
 \
 This action keeps reloading the page at an interval of `"wait_time"` until **targeted element** is **found** and **clicks** on it.
@@ -137,11 +141,12 @@ You can and should wait for async elements on the page to load before continuing
 
 Example in config file of explicitly waiting 2 sec : 
 
-> "wait for checkout page to load completely": {  
-> 	"action" : "wait",  
-> 	"wait_time" : "2"  
-> }
-
+```
+"wait for checkout page to load completely": {  
+						"action" : "wait",  	
+						"wait_time" : "2"  
+					     }
+```
 
 ### Input Text
 This action inputs text into the targeted element. 
@@ -150,23 +155,27 @@ You should use this to login (or other related actions) before you start executi
 
 Example in config file :
 
-> "enter cvv in text field": {  
-> 	"action" 	: "input text",  
-> 	"target_method" : "id",  
-> 	"target_name" 	: "cvv",  
-> 	"text"		: "123"  
->}
+```
+"enter cvv in text field": {  
+			        "action" 	: "input text",  
+				"target_method" : "id",  
+				"target_name" 	: "cvv",  
+				"text"		: "123"  
+			   }
+```
 
 ### Click 
 This action clicks on the  targeted element.
 
 Example in config file :
 
-> "click on place order" : {  
-> 	"action" 	: "click",  
-> 	"target_method" : "class_name",  
-> 	"target_name" 	: "content_3Dbgg"  
->}
+```
+"click on place order" : {  
+			      "action" 	: "click",  
+			      "target_method" : "class_name",  
+			      "target_name" 	: "content_3Dbgg"  
+			  }
+```
 
 ## Config File
 The config.json file is used to configure the script. 
