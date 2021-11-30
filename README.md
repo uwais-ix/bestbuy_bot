@@ -52,11 +52,11 @@ Refer to the Selenium documentation [here](https://selenium-python.readthedocs.i
 The script uses the following driver dictionary to provide a mapping to selenium API functions.
 ```
 driver_dict = {  
-	  "id"			 	  : driver.find_element_by_id,  
-	  "name"	 		  : driver.find_element_by_name,  
-	  "xpath"		  	  : driver.find_element_by_xpath,  
+	  "id"			  : driver.find_element_by_id,  
+	  "name"	          : driver.find_element_by_name,  
+	  "xpath"		  : driver.find_element_by_xpath,  
 	  "link_text"	  	  : driver.find_element_by_link_text,  
-	  "partial_link_text" : driver.find_element_by_partial_link_text,  
+	  "partial_link_text"     : driver.find_element_by_partial_link_text,  
 	  "tag_name"	 	  : driver.find_element_by_tag_name,  
 	  "class_name"		  : driver.find_element_by_class_name,  
 	  "css_selector"	  : driver.find_element_by_css_selector  
@@ -177,14 +177,15 @@ The JSON file consists of the following:
 ```
 {
 	"settings": { "browser name" : "chrome", 
-				  "driver path"  : "WebDriver path here"
-				}
+		      "driver path"  : "WebDriver path here"
+		    }
 	
 	"actions" " {
-					"action1name"{ "property1" : "value1",
-								   "property2" : "value2"
-					}
-	}
+		      "action1name"{ 
+		      		     "property1" : "value1",
+			             "property2" : "value2"
+				   }
+		    }
 				
 }
 ```  
